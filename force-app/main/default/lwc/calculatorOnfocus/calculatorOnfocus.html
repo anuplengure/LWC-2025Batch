@@ -1,0 +1,21 @@
+<template>
+    <lightning-card icon-name="standard:changes" title="Calculator : onfocus">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Enter First Number" onfocus={focusHandler} data-id="firstNumber"></lightning-input>
+            <lightning-input label="Enter Second Number" onfocus={focusHandler} data-id="secondNumber"></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button-group>
+                <lightning-button variant="brand" label="Add" onclick={calculate} icon-name="utility:add"></lightning-button>
+                <lightning-button variant="destructive" label="Subtract" onclick={calculate} icon-name="utility:dash"></lightning-button>
+                <lightning-button variant="brand" label="Multiply" onclick={calculate} icon-name="standard:first_non_empty"></lightning-button>
+                <lightning-button variant="neutral" label="Divide" onclick={calculate} ></lightning-button>
+        </lightning-button-group>
+        </div>
+        <div class="slds-m-around_medium" lwc:if={showResult}>
+            <p>Result : {result}</p>
+            <p><strong>Result History</strong></p>
+            <div>{resultList}</div>
+        </div>
+    </lightning-card>
+</template>

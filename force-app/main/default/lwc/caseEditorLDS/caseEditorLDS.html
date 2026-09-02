@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="LDS - Case Editor">
+        <lightning-input label="Enter Case Id" onchange={idChangeHandler}></lightning-input>
+        <template lwc:if={isValidCase}> 
+            <lightning-input label="Subject" value={subject} onchange={subjectChangeHandler}></lightning-input>
+            <lightning-textarea label="Description" value={description} onchange={descriptionChangeHandler}></lightning-textarea>
+            <lightning-combobox label="Priority" value={priority} options={priorityOptions} onchange={priorityChangeHandler}></lightning-combobox>
+            <lightning-combobox label="Status" value={status} options={statusOptions} onchange={statusChangeHandler}></lightning-combobox>
+            <lightning-button variant="brand" label="Save" onclick={saveHandler}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

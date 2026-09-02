@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subject__c</fullName>
+    <inlineHelpText>Select Subject as per your course</inlineHelpText>
+    <label>Subject</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Branch__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Python</fullName>
+                <default>false</default>
+                <label>Python</label>
+            </value>
+            <value>
+                <fullName>C++</fullName>
+                <default>false</default>
+                <label>C++</label>
+            </value>
+            <value>
+                <fullName>Java</fullName>
+                <default>false</default>
+                <label>Java</label>
+            </value>
+            <value>
+                <fullName>SOM</fullName>
+                <default>false</default>
+                <label>SOM</label>
+            </value>
+            <value>
+                <fullName>TOM</fullName>
+                <default>false</default>
+                <label>TOM</label>
+            </value>
+            <value>
+                <fullName>Mechanics</fullName>
+                <default>false</default>
+                <label>Mechanics</label>
+            </value>
+            <value>
+                <fullName>Structure</fullName>
+                <default>false</default>
+                <label>Structure</label>
+            </value>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>Basic Electrical</fullName>
+                <default>false</default>
+                <label>Basic Electrical</label>
+            </value>
+            <value>
+                <fullName>Electromagnetism</fullName>
+                <default>false</default>
+                <label>Electromagnetism</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Computer Engineering</controllingFieldValue>
+            <valueName>Python</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer Engineering</controllingFieldValue>
+            <valueName>C++</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Computer Engineering</controllingFieldValue>
+            <valueName>Java</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical</controllingFieldValue>
+            <valueName>SOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical</controllingFieldValue>
+            <valueName>TOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mechanical</controllingFieldValue>
+            <valueName>Mechanics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Civil</controllingFieldValue>
+            <valueName>Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Civil</controllingFieldValue>
+            <valueName>Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical</controllingFieldValue>
+            <valueName>Basic Electrical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electrical</controllingFieldValue>
+            <valueName>Electromagnetism</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

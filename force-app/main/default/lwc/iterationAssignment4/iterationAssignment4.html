@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Product List with Price Highlight">
+        <div class="slds-m-around_medium">
+            <template for:each={products} for:item="product">
+                <div key={product.id} class="slds-box slds-m-bottom_small" data-expensive={product.isExpensive}>
+                    <p><strong>Name:</strong> {product.name}</p>
+                    <p><strong>Category:</strong> {product.category}</p>
+                    <p><strong>Price:</strong> ₹{product.price}</p>
+                    <template if:true={product.isExpensive}>
+                        <p class="slds-text-color_error"> ⚠ High Value Product</p>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

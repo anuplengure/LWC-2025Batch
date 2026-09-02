@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Dynamic Object Creation">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Name" data-field="name" value={name} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Age" data-field="age" value={age} onchange={changeHandler}></lightning-input>
+            <lightning-input label="Roll Number" data-field="rollnumber" value={rollnumber} onchange={changeHandler}></lightning-input>
+            <lightning-button label="Create Object" onclick={clickHandler} class="slds-m-top_small"></lightning-button>
+        </div>
+        <pre>{dynamicobjectStringified}</pre>
+    </lightning-card>
+</template>

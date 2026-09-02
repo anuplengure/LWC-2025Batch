@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/Users/vaish/Desktop/LWC 2025MayBatch/LWC 2025Batch"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/Users/vaish/Desktop/LWC 2025MayBatch/LWC 2025Batch"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\Users\\vaish\\Desktop\\LWC 2025MayBatch\\LWC 2025Batch\\.eslintrc.json"
+    }
+  }
+}

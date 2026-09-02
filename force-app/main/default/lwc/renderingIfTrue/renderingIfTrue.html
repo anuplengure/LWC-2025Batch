@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Rendering using if:true and Checkbox">
+        <lightning-input type="checkbox" label="Show Detail" onchange={changeHandler}></lightning-input>
+        <template if:true={showDetails}>
+            <h1>Here are Details...<strong>Uncheck to hide</strong></h1>
+        </template>
+    </lightning-card>
+    <lightning-card title="Rendering using if:true and Buttons">
+        <template if:false={showDetails}>
+        <lightning-button label="Show Details" onclick={showHandler}></lightning-button>
+        </template>
+        <template if:true={showDetails}>
+            <h1>Here are Details...<strong>Uncheck to hide</strong></h1>
+            <lightning-button label="hide Details" onclick={hideHandler}></lightning-button> 
+        </template>
+    </lightning-card>
+    <lightning-card title="Rendering using lwc:if,lwc:elseif,lwc:else">
+        <lightning-input type="text" label="Enter Morning/Afternoon/Evening" onchange={inputHandler}></lightning-input>
+        <template lwc:if={isMorning}>
+            <p>Good Morning</p>
+        </template>
+        <template lwc:elseif={isAfternoon}>
+            <p>Good Afternoon</p>
+        </template>
+        <template lwc:else>
+            <p>Good Evening</p>
+        </template>
+    </lightning-card>
+</template>

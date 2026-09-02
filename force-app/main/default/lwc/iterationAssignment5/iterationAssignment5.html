@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Task List with Status Toggle">
+        <div class="slds-m-around_medium">
+            <template for:each={tasks} for:item="task">
+                <div key={task.id} class="slds-box slds-m-bottom_small">
+                    <p>
+                        <strong>Task:</strong>
+                        {task.title}
+                    </p>
+                    <p>
+                        <strong>Status:</strong>
+                        <span class={task.statusClass}>
+                            {task.status}
+                        </span>
+                    </p>
+                    <template if:false={task.isCompleted}>
+                        <lightning-button label="Mark Completed" variant="brand" data-id={task.id}
+                            onclick={handleComplete}>
+                        </lightning-button>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Iteration if no contacts">
+        <div class="slad-m-around_medium">
+            <template lwc:if={hasContacts}>
+            <template for:each={contacts} for:item="con">
+                <div key={con.id}>
+                    <p>Name : {con.name}</p>
+                    <p>Email : {con.email}</p>
+                    <p>Phone : {con.phone}</p>
+                </div>
+            </template>
+            </template>
+            <template lwc:else>
+                <div class="slds-box slds-text-color_weak slds-align_absolute-center">
+                <p>No Contacts found.</p>
+                </div>
+            </template>
+        </div>
+      
+    </lightning-card>
+</template>

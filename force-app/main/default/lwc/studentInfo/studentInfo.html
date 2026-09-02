@@ -1,0 +1,51 @@
+<template>
+    <!--Declarative -->
+    <!--<lightning-card title="studentInfo Parent">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <ul>
+                    <template for:each={studentInfoParent} for:item="student">
+                    <li key={student.rollNumber}>
+                        
+                        <c-std-info student-info-child={student} ontileclick={tileSelectHandler}></c-std-info>
+                    </li>
+                    
+                    </template>
+                </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" class="slds-var-p-around_medium">
+                <template lwc:if={selectedStudent} >
+                    <P>Selected Student - with Declarative Approach</P>
+                    <div>Name : {selectedStudent.name}</div>
+                    <div>Age : {selectedStudent.age}</div>
+                    <div>Roll Number : {selectedStudent.rollNumber}</div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>-->
+
+    <!--Programmatic -->
+    <lightning-card title="studentInfo Parent">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <ul>
+                    <template for:each={studentInfoParent} for:item="student">
+                    <li key={student.rollNumber}>
+                        <!--Parent to Child Communication-->
+                        <c-std-info student-info-child={student}></c-std-info>
+                    </li>
+                    
+                    </template>
+                </ul>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" class="slds-var-p-around_large">
+                <template lwc:if={selectedStudent} >
+                    <P>Selected Student - with Programmatic Approach</P>
+                    <div>Name : {selectedStudent.name}</div>
+                    <div>Age : {selectedStudent.age}</div>
+                    <div>Roll Number : {selectedStudent.rollNumber}</div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering based on Role">
+        <div class="slds-box slds-m-around_medium">
+            <template lwc:if={isAdmin}>
+                <p>Welcome Admin!!! You have full access.</p>
+            </template>
+            <template lwc:else>
+                <p>Welcome User!!! You have limited access.</p>
+            </template>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-helptext content="Buttons to toggle between Admin and User."></lightning-helptext>
+            <lightning-button variant="brand" label="Admin" onclick={makeAdmin}></lightning-button>
+            <lightning-button variant="brand" label="User" onclick={makeUser}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

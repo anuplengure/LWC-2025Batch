@@ -1,0 +1,8 @@
+.pending {
+color: #ba0517;
+font-weight: bold;
+}
+.completed {
+color: #2e844a;
+font-weight: bold;
+}

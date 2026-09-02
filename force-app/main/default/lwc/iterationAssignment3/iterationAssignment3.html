@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Combined Iteration & Conditional UI">
+        <div class="slds-m-around_medium">
+            <template lwc:if={hasContacts}>
+            <template for:each={contacts} for:item="con">
+                <div key={con.id} class={contactClass} data-vip={con.VIP}>
+                    <p>Name : {con.name}</p>
+                    <p>Email : {con.email}</p>
+                    <p>Phone : {con.phone}</p>
+                    <template lwc:if={con.isVIP}>
+                        <div class="slds-text-color_success slds-m-top_xx-small">
+                                <p>
+                                    <lightning-icon 
+                                        icon-name="utility:favorite" 
+                                        size="x-small" 
+                                        variant="warning">
+                                    </lightning-icon> 
+                                    VIP Contact
+                                </p>
+                            </div>
+                    </template>
+                </div>
+            </template>
+            </template>
+            <template lwc:else>
+                <div class="slds-box slds-text-color_weak slds-align_absolute-center">
+                <p>No Contacts found.</p>
+                </div>
+            </template>
+        </div>
+      
+    </lightning-card>
+</template>

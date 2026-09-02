@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Conditional Rendering for Masking Sensitive Data">
+        <div class="slds-m-around_medium">
+            <lightning-button label={buttonLabel} variant="brand" onclick={togglePhone}></lightning-button>
+        </div>
+        <div class="slds-box slds-m-around_medium">
+            <p><strong>Account Name:</strong> ABC Corp</p>
+            <p>
+                <strong>Phone:</strong>
+                <span class={phoneClass}>
+                    +91 1234567890
+                </span>
+            </p>
+            <p><strong>City:</strong> Hyderabad</p>
+        </div>
+    </lightning-card>
+</template>

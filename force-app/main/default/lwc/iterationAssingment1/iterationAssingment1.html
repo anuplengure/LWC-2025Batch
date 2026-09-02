@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact List using Iteration">
+        <div class="slds-m-around_medium">
+            <template for:each={contacts} for:item="con">
+                <div key={con.id} class="slds-box slds-m-around_small">
+                    <p><strong>Name : </strong>{con.name}</p>
+                    <p><strong>Email : </strong>{con.email}</p>
+                    <p><strong>Phone : </strong>{con.phone}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

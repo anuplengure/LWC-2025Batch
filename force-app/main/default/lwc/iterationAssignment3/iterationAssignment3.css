@@ -1,0 +1,8 @@
+[data-vip="true"] {
+border-left: 4px solid #2e844a;
+background-color: #f3faf7;
+}
+
+.yellow-star {
+    --slds-c-icon-color-foreground-default: #FFD700; /* Gold Hex */
+}

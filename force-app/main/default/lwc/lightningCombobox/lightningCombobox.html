@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Record Selected : lightning-combobox">
+        <div class="slds-box slds-m-around_medium">
+            <lightning-combobox label="Select Record" placeholder="Choose a record" options={recordOptions} onchange={handleRecordChange}></lightning-combobox>
+            <template if:true={selectedRecord}>
+                <p class="slds-m-top_medium">
+                    <b>Selected Record:</b> {selectedRecord}
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

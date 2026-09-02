@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Expand Details on Conditional Rendering">
+        <template lwc:if={isDisplay}>
+            <div class="slds-box slds-m-around_medium">
+                <p><strong>Name : </strong>Anup</p>
+                <p><strong>Email : </strong>anup@gmail.com</p>
+                <p><strong>Phone : </strong>123456789</p>
+            </div>
+            <div class="slds-m-around_medium">
+                <lightning-button variant="destructive" label="Hide Details" onclick={hideDetailHandler}></lightning-button>
+            </div>
+        </template>
+        <template lwc:else>
+            <div class="slds-m-around_medium">
+                <lightning-button variant="brand" label="Show Details" onclick={showDetailHandler}></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

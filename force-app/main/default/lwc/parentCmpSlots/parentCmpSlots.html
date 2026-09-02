@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="studentInfo Parent - Slot">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <ul>
+                    <template for:each={studentInfoParent} for:item="student">
+                        <li key={student.rollNumber}>
+                            <!--Parent to Child Communication-->
+                            <c-child-cmp-slots student-info-child={student}>
+                                <lightning-tile label={student.rollNumber} slot="stdInfo">
+                                    <p class="slds-truncate" title={student.name}>{student.name}</p>
+                                    <p class="slds-truncate" title={student.age}>{student.age}</p>
+                                </lightning-tile>
+                                <div>Additional Markup</div>
+                            </c-child-cmp-slots>
+                        </li>
+
+                    </template>
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
